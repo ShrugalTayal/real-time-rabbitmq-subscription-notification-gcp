@@ -3,7 +3,7 @@
 ## **Title**: YouTube RabbitMQ Application
 
 ## **Description**:
-This repository contains a Python application for managing user subscriptions to YouTube channels using RabbitMQ for messaging and MongoDB for data storage. The application consists of two main components: a YouTube server that handles subscription requests and a user client that receives notifications about new videos uploaded by subscribed channels. The README provides instructions on how to set up and run the application.
+This repository contains a Python application for managing user subscriptions to YouTube channels using RabbitMQ for messaging and MongoDB for data storage. The application consists of 3 main components: a server that handles: subscription requests, video upload requests, and a client that receives notifications about new videos uploaded by subscribed channels. The README provides instructions on how to set up and run the application.
 
 ## **Setup**:
 To run the program successfully, follow these steps:
@@ -29,8 +29,8 @@ To run the program successfully, follow these steps:
 
 4. **Clone the Repository**:
    ```
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/ShrugalTayal/video-sharing-rabbitmq-app.git
+   cd video-sharing-rabbitmq-app
    ```
 
 5. **Update Configuration**:
