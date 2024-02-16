@@ -12,6 +12,8 @@ To run the program successfully, follow these steps:
    - Install RabbitMQ on your local machine or any server.
    - Start the RabbitMQ server.
      ```
+     rabbitmq-plugins enable rabbitmq_management
+     rabbitmq-service start
      sudo apt-get install pika
      sudo apt-get install pymongo
      sudo apt-get install dotenv
@@ -21,8 +23,9 @@ To run the program successfully, follow these steps:
    - Make sure you have Python installed on your system.
    - Install the required Python packages using pip:
      ```
-     rabbitmq-plugins enable rabbitmq_management
-     rabbitmq-service.bat start
+     sudo apt-get install pika
+     sudo apt-get install pymongo
+     sudo apt-get install dotenv
      ```
 
 3. **Setup MongoDB Database**:
