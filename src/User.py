@@ -6,7 +6,7 @@ import ast
 class User:
     def __init__(self, username, host):
         self.username = username
-        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host))
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host=host, credentials=pika.PlainCredentials('shrugal', 'shrugal01')))
         self.channel = self.connection.channel()
         self.channel.queue_declare(queue='user_requests')
 
@@ -72,7 +72,7 @@ class User:
 if __name__ == '__main__':
     username = sys.argv[1]
     # Replace 'localhost' with the IP address of the Google Cloud instance
-    user = User(username, 'localhost')
+    user = User(username, '35.223.32.92')
     if len(sys.argv) > 2:
         action = sys.argv[2]
         youtuber = sys.argv[3]

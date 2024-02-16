@@ -4,7 +4,7 @@ import json
 
 class Youtuber:
     def __init__(self, host):
-        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host))
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host=host, credentials=pika.PlainCredentials('shrugal', 'shrugal01')))
         self.channel = self.connection.channel()
         self.channel.queue_declare(queue='youtuber_requests')
 
@@ -32,5 +32,5 @@ if __name__ == '__main__':
     youtuber_name = sys.argv[1]
     video_name = ' '.join(sys.argv[2:])
     # Replace 'localhost' with the IP address of the Google Cloud instance
-    youtuber = Youtuber('localhost')
+    youtuber = Youtuber('35.223.32.92')
     youtuber.publish_video(youtuber_name, video_name)

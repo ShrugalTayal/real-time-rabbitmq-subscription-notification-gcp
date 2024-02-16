@@ -12,7 +12,9 @@ To run the program successfully, follow these steps:
    - Install RabbitMQ on your local machine or any server.
    - Start the RabbitMQ server.
      ```
-     pip install pika pymongo
+     sudo apt-get install pika
+     sudo apt-get install pymongo
+     sudo apt-get install dotenv
      ```
 
 2. **Install Dependencies**:
